@@ -16,5 +16,6 @@ export default function HomeSection() {
         <img alt="Secundaria 4" src={image} className={`${styles.content3} ${styles.tall}`} />
       </div>
     </section>
+    // <div>HomeSection</div>
   );
 }
