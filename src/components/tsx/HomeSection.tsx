@@ -1,5 +1,6 @@
 import styles from "../styles/HomeSection.module.css";
 import image from "../../assets/images.jpeg";
+import rebajas from "../../assets/rebajas.jpg";
 
 export default function HomeSection() {
   return (
@@ -12,8 +13,8 @@ export default function HomeSection() {
         <img alt="Secundaria 2" src={image} className={`${styles.content3} ${styles.Nottall}`} />
       </div>
       <div className={styles.contentBox3}>
-        <img alt="Secundaria 3" src={image} className={`${styles.content2} ${styles.Nottall}`} />
-        <img alt="Secundaria 4" src={image} className={`${styles.content3} ${styles.tall}`} />
+        <img alt="Secundaria 3" src={image} className={`${styles.content2} ${styles.Nottall} ${styles.nopad}`} />
+        <div className={`${styles.content3} ${styles.tall} ${styles.div}`}></div>
       </div>
     </section>
     // <div>HomeSection</div>

@@ -1,6 +1,6 @@
 
 export default function ProductosSection() {
   return (
-    <div>ProductosSection</div>
+    <div>Productos/Muebles Section</div>
   )
 }

@@ -1,9 +1,7 @@
 .content {
     max-width: 1600px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 20px;
 }
 
 .contentBox1 {
@@ -24,13 +22,28 @@
     object-fit: cover;
     padding-right: 20px;
 }
+
 .tall{
     height: 57%;
 }
 .Nottall{
     height: 43%;
 }
+.nopad{
+    padding: 0;
+}
+.div{
+    background-color: orange;
+}
 @media (max-width: 1400px) {
+    .contentBox1 {
+        grid-row: span 1;   
+    }
+    .contentBox3 {
+        grid-column: span 3;
+        flex-direction: row;
+        gap: 20px;
+    }
     .content {
         width: 95%;
         grid-template-columns: repeat(3, 1fr);
@@ -39,13 +52,18 @@
     .content1, .content2, .content3 {
         padding-right: 0px;
     }
-    .tall{
-        height: 50%;
+    /* Modificamos esta parte */
+    .contentBox3 .tall {
+        width: 50%;
+        height: 350px; /* O un valor fijo que se ajuste a tu diseño */
     }
-    .Nottall{
-        height: 50%;
+    .contentBox3 .Nottall {
+        width: 50%;
+        height: 350px; /* O el mismo valor que arriba */
     }
 }
+
+/* El resto del CSS se mantiene igual */
 
 @media (max-width: 1100px) {
     .content {
@@ -56,15 +74,23 @@
         grid-column: span 2;
         grid-row: span 2;
     }
-    .tall{
+    .contentBox3 {
+        grid-column: span 1; /* Vuelve a ocupar una columna */
+        flex-direction: column; /* Vuelve a la dirección vertical */
+    }
+    .contentBox3 .tall,
+    .contentBox3 .Nottall {
+        width: 100%; /* Vuelve a ocupar el ancho completo */
+    }
+    .tall {
         height: 57%;
     }
-    .Nottall{
+    .Nottall {
         height: 43%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .content {
         width: 100%;
         grid-template-columns: 1fr;
@@ -79,10 +105,10 @@
     .contentBox2, .contentBox3 {
         gap: 10px;
     }
-    .tall{
+    .tall {
         height: 50%;
     }
-    .Nottall{
+    .Nottall {
         height: 50%;
     }
 }
