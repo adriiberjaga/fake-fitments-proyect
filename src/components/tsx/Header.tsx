@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  
   return (
     <header className={styles.header}>
       <div className={styles.desktopHeader}>
@@ -59,6 +61,7 @@ export default function Header() {
             <div className={styles.headerNav}>
               <nav className={styles.Nav}>
                 <NavLink
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className={({ isActive }) =>
                     isActive
                       ? `${styles.navlink} ${styles.active}`
@@ -69,6 +72,7 @@ export default function Header() {
                   Muebles
                 </NavLink>
                 <NavLink
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className={({ isActive }) =>
                     isActive
                       ? `${styles.navlink} ${styles.active}`
@@ -79,6 +83,7 @@ export default function Header() {
                   Lavabo
                 </NavLink>
                 <NavLink
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
                   className={({ isActive }) =>
                     isActive
                       ? `${styles.navlink} ${styles.active}`
